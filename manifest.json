@@ -1,0 +1,31 @@
+{
+  "name": "CIT-LMS - Learning Management System",
+  "short_name": "CIT-LMS",
+  "description": "Learning Management System for the College of Industrial Technology.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f6f2",
+  "theme_color": "#27384a",
+  "icons": [
+    {
+      "src": "cit-seal.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "cit-seal.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "cit-seal.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

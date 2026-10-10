@@ -1,0 +1,75 @@
+.profile-mini{margin-bottom:2px}
+.topbar-year-label[hidden],.topbar-year-selector[hidden]{display:none!important}
+.profile-mini>div:last-child{min-width:0}
+.profile-mini strong,.profile-mini span{max-width:155px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dashboard-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,.72fr);gap:22px;align-items:start}
+.dashboard-main{min-width:0}
+.year-dashboard-label{margin:8px 0 0;color:var(--blue);font-size:12px;font-weight:700}
+.dashboard-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:15px}
+.dashboard-heading h2{margin:0;font:600 20px 'Space Grotesk',sans-serif}
+.classroom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.classroom-card{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.classroom-banner{min-height:78px;padding:13px 15px;display:flex;justify-content:space-between;align-items:flex-start;color:var(--ink);font:700 11px 'Space Grotesk',sans-serif}
+.classroom-banner span:last-child{font-size:9px;font-weight:500;opacity:.7}
+.classroom-banner.coral{background:#f5d5ca}
+.classroom-banner.navy{background:#dce5ed}
+.classroom-banner.lime{background:#e6edcf}
+.classroom-banner.yellow{background:#f6ebc7}
+.classroom-body{padding:14px}
+.classroom-body h3{margin:0;font:600 15px 'Space Grotesk',sans-serif}
+.classroom-body>p{margin:5px 0 13px;color:var(--muted);font-size:10px}
+.classroom-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+.classroom-footer small{color:#929b99;font-size:9px}
+.classroom-footer .text-button{white-space:nowrap}
+.dashboard-side{display:grid;gap:15px}
+.dashboard-activity-panel{padding:17px}
+.dashboard-activity-panel .panel-heading{align-items:start;margin-bottom:9px}
+.dashboard-activity-panel .panel-heading h2{margin:0;font:600 16px 'Space Grotesk',sans-serif}
+.dashboard-activity{display:grid;grid-template-columns:8px minmax(0,1fr) auto;gap:9px;align-items:start;padding:12px 0;border-bottom:1px solid #eff0ed}
+.activity-marker{width:7px;height:7px;margin-top:4px;border-radius:50%;background:var(--coral)}
+.dashboard-activity:nth-of-type(3) .activity-marker{background:var(--blue)}
+.dashboard-activity:nth-of-type(4) .activity-marker{background:var(--lime)}
+.dashboard-activity strong,.dashboard-activity small{display:block}
+.dashboard-activity strong{font-size:10px}
+.dashboard-activity small{margin-top:4px;color:#969e9c;font-size:9px;line-height:1.4}
+.activity-status{color:#89928f;font-size:9px;text-align:right}
+.dashboard-activity-panel .full-link{margin-top:12px}
+.dashboard-note{display:grid;gap:8px;padding:17px;background:#e4ead5;border-radius:8px}
+.dashboard-note strong{max-width:250px;font:600 14px/1.4 'Space Grotesk',sans-serif}
+.dashboard-note button{justify-self:start;padding:4px 0;color:#506347;font-size:10px;font-weight:700}
+.workspace-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;align-items:center;padding:15px 0;border-bottom:1px solid #eff0ed}
+.workspace-row:last-child{border-bottom:0}
+.workspace-row strong,.workspace-row small{display:block}
+.workspace-row strong{font-size:12px}
+.workspace-row small{margin-top:4px;color:#929b99;font-size:10px}
+.activity-row{align-items:start}
+.activity-row-detail{margin-top:3px;color:#7f8a88;font-size:9px}
+.activity-row .text-button{align-self:center}
+#instructorActivitySubmissions{margin-top:6px}
+.workspace-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.workspace-card{padding:19px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.workspace-card h2{margin:12px 0 7px;font:600 17px 'Space Grotesk',sans-serif}
+.workspace-card p{margin:0 0 18px;color:var(--muted);font-size:10px}
+.report-progress{display:grid;grid-template-columns:minmax(150px,.7fr) minmax(100px,1fr) 38px;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid #eff0ed;color:#687276;font-size:11px}
+.report-progress:last-child{border-bottom:0}
+.report-progress strong{text-align:right;font:700 11px 'Space Grotesk',sans-serif}
+.report-progress-detail{display:block;margin-top:3px;color:#929b99;font-size:9px;font-weight:400}
+.report-meta{margin:0 0 16px;color:var(--muted);font-size:11px}
+.report-course-detail{color:#929b99;font-size:10px;text-align:right}
+.empty-state{grid-column:1/-1;display:grid;justify-items:start;gap:8px;padding:25px;background:#fffefb;border:1px dashed #d9ded8;border-radius:8px}
+.empty-state-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--lime-soft);color:#778b45;font-size:18px}
+.empty-state strong{font:600 16px 'Space Grotesk',sans-serif}
+.empty-state p,.empty-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.5}
+.empty-state .primary-button{margin-top:5px}
+.pending-panel{margin-top:18px}
+.classroom-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:end;margin-bottom:18px;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.classroom-form[hidden]{display:none}
+.classroom-form label{display:grid;gap:6px;color:#59636a;font-size:10px;font-weight:700}
+.classroom-form input{height:40px;min-width:0;padding:0 10px;border:1px solid #e1e5df;border-radius:6px;background:white;color:var(--ink);font:12px 'DM Sans',sans-serif}
+.classroom-form button{min-height:40px;margin:0}
+.activity-accept{padding:3px 7px;color:#567148;background:#edf4e4;border-radius:5px;font-size:9px;font-weight:700}
+.activity-accept:hover{background:#dfeaca}
+.request-row .primary-button{padding:9px 13px}
+.text-button:disabled,.primary-button:disabled{opacity:.6;cursor:wait}
+@media(max-width:900px){.dashboard-layout{grid-template-columns:1fr}.dashboard-side{grid-template-columns:1fr 1fr}.workspace-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.classroom-grid,.workspace-card-grid,.dashboard-side{grid-template-columns:1fr}.workspace-row{grid-template-columns:minmax(0,1fr) auto}.workspace-row .text-button,.workspace-row .dots-button{grid-column:2}.report-progress{grid-template-columns:minmax(100px,.8fr) minmax(50px,1fr) 34px;gap:8px}.dashboard-activity{grid-template-columns:8px minmax(0,1fr)}.activity-status{grid-column:2;text-align:left}.classroom-form{grid-template-columns:1fr}.classroom-form button{width:100%}.empty-state{padding:20px}}

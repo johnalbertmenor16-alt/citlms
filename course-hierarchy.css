@@ -1,0 +1,36 @@
+.program-course-group{margin-top:14px}.program-course-group .panel-heading h2{font:600 18px 'Space Grotesk',sans-serif;margin:5px 0 0}.categorize-subject-form{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.categorize-subject-form select{min-width:140px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:8px;font:10px 'DM Sans',sans-serif}.uncategorized-subject{gap:12px;flex-wrap:wrap}.uncategorized-subject>div{flex:1 1 220px}.program-course-group .workspace-row:last-child{border-bottom:0}@media(max-width:640px){.categorize-subject-form{width:100%}.categorize-subject-form select{flex:1;min-width:0}.uncategorized-subject{align-items:flex-start}}
+.classroom-hierarchy{display:grid;gap:12px}
+.classroom-hierarchy-program,.classroom-hierarchy-course{overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.classroom-hierarchy-program>summary,.classroom-hierarchy-course>summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:58px;padding:14px 18px;cursor:pointer;list-style:none}
+.classroom-hierarchy-program>summary::-webkit-details-marker,.classroom-hierarchy-course>summary::-webkit-details-marker{display:none}
+.classroom-hierarchy-program>summary::before,.classroom-hierarchy-course>summary::before{width:8px;height:8px;flex:0 0 8px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);content:"";transform:rotate(-45deg);transition:transform .18s ease}
+.classroom-hierarchy-program[open]>summary::before,.classroom-hierarchy-course[open]>summary::before{transform:rotate(45deg)}
+.classroom-hierarchy-program>summary{border-left:4px solid var(--coral);background:linear-gradient(90deg,var(--coral-soft),var(--panel) 45%)}
+.hierarchy-program-name{flex:1;color:var(--navy);font:600 16px 'Space Grotesk',sans-serif}
+.hierarchy-count{color:#89939e;font-size:10px;white-space:nowrap}
+.hierarchy-program-content{display:grid;gap:9px;padding:12px 14px 15px;border-top:1px solid var(--line)}
+.classroom-hierarchy-course-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+.classroom-hierarchy-course-row>.classroom-hierarchy-course{min-width:0}
+.hierarchy-course-actions{display:grid;justify-items:end;gap:8px}
+.program-course-edit-form{grid-column:1/-1;width:min(100%,420px);margin:0;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.program-course-edit-form[hidden],.subject-edit-form[hidden]{display:none}
+.subject-edit-form{grid-column:1/-1;width:100%;margin:8px 0 0;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.subject-edit-form>button[type=button]{justify-self:start}
+.remove-program-course-button,.remove-program-button{color:var(--coral);white-space:nowrap}
+.classroom-hierarchy-course>summary{min-height:48px;padding:12px 14px;color:var(--navy);font-size:13px;font-weight:700}
+.classroom-hierarchy-course>summary::before{border-color:var(--coral)}
+.hierarchy-course-content{padding:0 14px 13px 30px}
+.hierarchy-subject-group{margin-top:8px}
+.hierarchy-subject-group h4{display:flex;align-items:center;gap:8px;margin:0 0 8px;color:#536987;font:700 10px 'Space Grotesk',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.hierarchy-subject-group h4 span{display:grid;min-width:19px;height:19px;place-items:center;border-radius:999px;background:var(--blue-soft);color:var(--blue);font:700 9px 'DM Sans',sans-serif}
+.hierarchy-subject-group .classroom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hierarchy-subject-row{grid-template-columns:minmax(0,1fr) auto}
+.hierarchy-subject-row>.hierarchy-subject-actions,.hierarchy-subject-row>.subject-edit-form{grid-column:1/-1}
+.hierarchy-subject-actions{display:flex;align-items:center;gap:12px}
+.hierarchy-subject-actions .subject-year-form{display:flex;align-items:center;gap:6px}
+.subject-year-form select,.categorize-subject-form select{max-width:150px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:7px;font:10px 'DM Sans',sans-serif}
+.remove-program-subject-button{color:var(--coral)}
+.program-row-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.program-row-actions .program-chair-assignment-form{display:flex;align-items:center;gap:8px}
+.hierarchy-help{margin:8px 0;color:var(--muted);font-size:11px}
+@media(max-width:620px){.classroom-hierarchy-program>summary,.classroom-hierarchy-course>summary{gap:9px;padding-right:12px;padding-left:12px}.hierarchy-program-name{font-size:14px}.hierarchy-count{font-size:9px}.hierarchy-program-content{padding-right:9px;padding-left:9px}.hierarchy-course-content{padding-right:5px;padding-left:16px}.hierarchy-subject-group .classroom-grid{grid-template-columns:1fr}.hierarchy-subject-row{grid-template-columns:minmax(0,1fr)}.hierarchy-subject-row>.text-button{grid-column:1}.hierarchy-subject-actions{align-items:flex-start;flex-direction:column}.hierarchy-subject-actions .subject-year-form{width:100%;flex-wrap:wrap}.subject-year-form select,.categorize-subject-form select{max-width:none;flex:1;min-width:130px}.classroom-hierarchy-course-row{grid-template-columns:1fr}.hierarchy-course-actions{justify-items:start}.program-course-edit-form{width:100%}.remove-program-course-button{justify-self:end}.program-row-actions{justify-content:flex-start}.program-row-actions .program-chair-assignment-form{flex-wrap:wrap}}

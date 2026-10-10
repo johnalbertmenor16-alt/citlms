@@ -1,0 +1,12 @@
+node_modules/
+uploads/
+.env
+.env.*
+!.env.example
+*.bak
+*.mdf
+*.ldf
+*.zip
+npm-debug.log*
+Thumbs.db
+.DS_Store

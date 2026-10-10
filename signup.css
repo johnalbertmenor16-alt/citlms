@@ -1,0 +1,11 @@
+.signup-panel{margin-top:27px}.signup-panel h2{margin:5px 0 8px;font:600 23px 'Space Grotesk',sans-serif}.signup-panel .auth-subtitle{margin:0 0 18px;color:#89918f;font-size:11px;line-height:1.5}.signup-panel .auth-link{margin-left:0}.signup-panel select{width:100%;height:45px;padding:0 12px;border:1px solid #e1e5df;border-radius:6px;background:white;color:var(--ink);font:13px 'DM Sans',sans-serif}.signup-panel select:focus{border-color:#6b9bdd;box-shadow:0 0 0 3px rgba(107,155,221,.15)}.signup-panel label span{color:#89918f;font-weight:400}
+.avatar-upload{display:flex;align-items:center;gap:14px;padding:12px;border:1px dashed #d9ded8;border-radius:10px;background:#fbfbf8}
+.settings-card .avatar-upload{margin-bottom:14px}
+.avatar-preview{width:64px;height:64px;flex:0 0 64px;display:grid;place-items:center;border-radius:50%;background:#eadfd3;color:#a07c54;font:700 22px 'Space Grotesk',sans-serif;background-size:cover;background-position:center;overflow:hidden}
+.avatar-preview-large{width:84px;height:84px;flex-basis:84px;font-size:26px}
+.avatar-upload-fields{display:grid;gap:6px;min-width:0}
+.avatar-upload-fields small{color:#89918f;font-size:10px;line-height:1.4}
+.avatar-upload-fields input[type=file]{font-size:11px;color:#687276;max-width:100%}
+.avatar-upload-actions{display:flex;align-items:center;gap:14px}
+.avatar-photo{background-color:#e3e6e0;background-size:cover;background-position:center}
+#topbarAvatar{margin-right:4px}.signup-request-row{flex-wrap:wrap;gap:8px 14px}.signup-request-row>div{flex:1 1 240px}

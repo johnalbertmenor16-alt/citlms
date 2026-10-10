@@ -1,0 +1,64 @@
+.topbar-year-label{margin:0;color:#9aa2a1;white-space:nowrap}.topbar-year-selector{max-width:105px;background:#fffefb;border:1px solid var(--line);border-radius:6px;padding:7px 8px;color:var(--ink)}
+.year-selector-label{display:block;color:#9aa2a1;font-size:8px;margin-top:4px;text-transform:uppercase;letter-spacing:.08em}.year-selector{display:block;max-width:105px;border:0;background:transparent;color:#7f8888;font:10px 'DM Sans',sans-serif;padding:2px 0;outline-color:var(--coral);cursor:pointer}.profile-mini .year-selector:focus{color:var(--ink)}@media(max-width:560px){.year-selector{max-width:96px;font-size:10px}}
+ .year-badge{display:inline-block;padding:3px 6px;border-radius:4px;font:700 9px 'Space Grotesk',sans-serif;white-space:nowrap;margin-left:2px}.year-1{background:#e8f0ff;color:#557eae}.year-2{background:#fff0eb;color:#cf6e5c}.year-3{background:#f1f7de;color:#829848}.year-4{background:#fff7dd;color:#a48632}.large-course-card .year-badge{margin-left:5px}.syllabus-subject .year-badge{margin-left:0}
+html{overflow-x:hidden}body{min-width:280px;overflow-x:hidden}.app-shell{width:100%;min-width:0}.topbar,.page-container{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}.button,.primary-button,.filter-button,.nav-item,button{min-height:36px}.course-card,.task-row,.large-course-card,.announcement,.message-row{max-width:100%;min-width:0}.course-info,.task-detail,.message-row>div:nth-child(2){min-width:0;overflow-wrap:anywhere}.course-title-row h3,.task-detail strong,.announcement strong{overflow-wrap:anywhere}.calendar-panel,.grade-panel,.announcements-page,.message-list,.settings-card,.syllabus-subjects,.outcomes-panel,.grading-panel{min-width:0;overflow:hidden}@media (min-width:821px) and (max-width:1180px){.sidebar{width:228px}.content-grid{grid-template-columns:minmax(0,1.1fr) minmax(270px,.8fr);gap:24px}.page-container{padding-top:32px}.stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}.right-column{gap:12px}}@media (max-width:820px){.sidebar{width:min(280px,80vw)}.topbar{position:sticky;top:0;z-index:4}.page-container{padding-top:28px;padding-bottom:48px}.course-view-grid{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr}.view-header .primary-button{align-self:flex-start}.task-row{align-items:flex-start}.task-date{flex:0 0 35px}.right-column{grid-template-columns:1fr}.quote-card{grid-column:auto}.calendar-event{overflow-wrap:anywhere}}@media (max-width:560px){.topbar{padding-top:8px;padding-bottom:8px}.topbar-actions{gap:5px}.notification{font-size:19px}.avatar-small{width:28px;height:28px}.page-container{padding-top:24px}.stats-grid{grid-template-columns:1fr 1fr;gap:8px}.stat-card{padding:12px 11px}.stat-top{font-size:10px}.stat-card>strong{font-size:23px}.welcome-row h1,.view-header h1{letter-spacing:-1px}.subtitle{font-size:12px;line-height:1.4}.course-card{align-items:flex-start;padding:11px;gap:10px}.course-color{width:46px;height:46px;flex:0 0 46px}.course-title-row h3{font-size:12px}.course-info p{line-height:1.35}.arrow-button{font-size:17px}.task-row{gap:8px;padding:11px 9px}.task-detail strong{font-size:10px;line-height:1.35}.task-detail span{line-height:1.35}.more-button{font-size:12px}.panel{padding:15px}.panel-heading h2{font-size:14px}.calendar-panel,.grade-panel,.announcements-page,.message-list{padding:15px}.calendar-week{margin-top:18px}.calendar-week b{font-size:15px}.calendar-week .today b{width:26px;height:26px}.schedule-item{grid-template-columns:35px 4px 1fr}.full-announcement p{font-size:10px}.message-row{align-items:flex-start;flex-wrap:wrap}.message-row time{width:100%;padding-left:46px}.auth-form-wrap{padding-left:max(22px,env(safe-area-inset-left));padding-right:max(22px,env(safe-area-inset-right))}.auth-form input[type=email],.auth-form input[type=password]{font-size:16px}.login-button{min-height:46px}.auth-art{padding-top:max(24px,env(safe-area-inset-top))}}@media (max-width:360px){.stats-grid{grid-template-columns:1fr}.stat-card{min-height:96px}.topbar-actions .notification{display:none}.breadcrumb strong{font-size:11px}.course-title-row{display:block}.course-code{margin-top:4px}.task-date{padding-right:8px;width:30px;flex-basis:30px}.task-date strong{font-size:15px}.task-row{gap:6px}.view-toolbar{width:100%}.view-toolbar .filter-button{max-width:100%;white-space:normal;text-align:left}.grading-bars{gap:14px}.syllabus-banner{padding:16px}.syllabus-banner h2{font-size:16px;line-height:1.2}}@media (pointer:coarse){button,.nav-item,.filter-button{touch-action:manipulation}.nav-item{min-height:42px}.primary-button{min-height:44px}.icon-button{min-width:36px;min-height:36px}}
+
+/* ---- Mobile / PWA polish (touch devices) ---- */
+html{-webkit-text-size-adjust:100%}
+.topbar{padding-top:env(safe-area-inset-top)}
+.sidebar{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+.auth-screen{padding-top:max(18px,env(safe-area-inset-top));padding-bottom:max(18px,env(safe-area-inset-bottom))}
+/* Prevent iOS Safari from zooming when focusing form fields */
+@media (max-width:820px){
+  input,select,textarea{font-size:16px !important}
+  .auth-form input,.auth-form select,.signup-panel select,.settings-card input,.classroom-form input,.academic-form input,.academic-form select,.academic-form textarea,.roster-add-form input,.activity-submission-form textarea,.grade-submission-form input,.chat-compose textarea,.module-upload-fields input,.module-upload-fields textarea{font-size:16px !important}
+}
+/* Comfortable tap targets on touch screens */
+@media (pointer:coarse){
+  .text-button,.arc-link,.full-link,.auth-link{min-height:40px;display:inline-flex;align-items:center}
+  .nav-item{min-height:46px}
+  .primary-button,.filter-button,.auth-submit{min-height:44px}
+  .topbar .logout-button,.topbar .filter-button,.topbar .primary-button{min-height:auto}
+  .icon-button,.dots-button{min-width:40px;min-height:40px;display:inline-grid;place-items:center}
+  .activity-accept{min-height:36px;padding:8px 12px}
+  .menu-button{min-width:44px;min-height:44px}
+}
+/* Keep standalone (installed) app flush with the screen edges */
+@media (display-mode:standalone){
+  .app-shell{min-height:100vh}
+}
+/* Respect notches / rounded corners in landscape on phones */
+@media (max-width:900px) and (orientation:landscape){
+  .sidebar{width:min(320px,60vw)}
+}
+
+/* ---- Mobile drawer fix: no white sliver on the left edge ---- */
+@media (max-width:820px){
+  html,body{max-width:100%;width:100%;height:auto;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+  .app-shell{width:100%;max-width:100%;min-height:100vh;overflow-x:hidden;display:block}
+  .sidebar{left:0;top:0;width:min(280px,82vw);max-width:82vw;height:100vh;transform:translateX(-102%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility 0s linear .25s}
+  .sidebar.open{transform:translateX(0);visibility:visible;pointer-events:auto;transition:transform .25s ease,visibility 0s linear 0s}
+  .main-content{width:100%;max-width:100%;min-width:0}
+  .topbar{position:sticky}
+}
+@media (max-width:360px){
+  .sidebar{width:min(280px,88vw);max-width:88vw}
+}
+
+/* ---- Mobile topbar: readable, compact, tidy order ---- */
+@media (max-width:560px){
+  .topbar{height:auto;min-height:56px;padding:8px 14px;gap:10px;flex-wrap:nowrap}
+  .menu-button{margin-right:2px;font-size:18px;flex:0 0 auto}
+  .breadcrumb{flex:1 1 auto;min-width:0;gap:0}
+  .breadcrumb strong{display:block;font-size:15px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topbar-actions{flex:0 0 auto;gap:8px;align-items:center}
+  .topbar-year-label{margin:0;font-size:9px;letter-spacing:.06em;line-height:1.1}
+  .topbar-year-selector{max-width:92px;font-size:12px;padding:4px 2px}
+  .avatar-small{width:30px;height:30px;flex:0 0 30px}
+  .logout-button{font-size:12px;padding:6px 4px;white-space:nowrap}
+}
+@media (max-width:400px){
+  .topbar-year-label{display:none}
+  .topbar-year-selector{max-width:84px}
+  .logout-button{font-size:11px}
+}

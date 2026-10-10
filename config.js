@@ -1,0 +1,1 @@
+window.LMS_API_BASE_URL = '';

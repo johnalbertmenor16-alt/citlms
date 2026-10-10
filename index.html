@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#27384a" />
+  <meta name="description" content="CIT Learning Management System for the College of Industrial Technology." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CIT-LMS" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="cit-seal.png" />
+  <link rel="icon" href="cit-seal.png" />
+  <title>LMS | College of Industrial Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="views.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="arc.css" />
+  <link rel="stylesheet" href="modules.css" />
+  <link rel="stylesheet" href="classroom-chat.css" />
+  <link rel="stylesheet" href="classroom-content.css" />
+  <link rel="stylesheet" href="academic-workflow.css" />
+  <link rel="stylesheet" href="course-hierarchy.css" />
+  <link rel="stylesheet" href="password-recovery.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="preview.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <main class="auth-screen" id="authScreen">
+    <section class="auth-panel" aria-labelledby="authTitle">
+      <div class="auth-brand"><span class="auth-logo-tile"><img class="auth-logo" src="cit-seal.png" alt="College of Industrial Technology seal"></span><h1 id="authTitle">CIT-LMS</h1></div>
+      <div class="auth-heading">
+        <p class="auth-campus-tag">CIT LEARNING HUB</p>
+        <h2>Welcome back.</h2>
+        <p class="auth-subtitle">Sign in to access the learning hub.</p>
+      </div>
+      <form class="auth-form" id="loginForm">
+        <label for="loginAccountId">Account ID</label>
+        <input id="loginAccountId" name="accountId" type="text" autocomplete="username" placeholder="Enter your account ID" required>
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <button class="auth-submit" type="submit">Sign in <span aria-hidden="true">→</span></button>
+        <div class="auth-form-links"><button class="auth-link" id="showSignup" type="button">Request an account</button><button class="auth-link" id="showForgotPassword" type="button">Forgot password?</button></div>
+        <p class="auth-demo-note">Use your registered account ID and password.</p>
+      </form>
+      <section class="signup-panel" id="signupPanel" hidden>
+        <p class="eyebrow">STUDENT REGISTRATION</p>
+        <h2>Create an account</h2>
+        <p class="auth-subtitle" id="signupApprovalMessage">Student accounts need approval from the Dean or Program Chair. Instructor accounts need Dean approval.</p>
+        <form class="auth-form" id="signupForm">
+          <label for="signupProfilePicture">Profile picture <span>(optional)</span></label>
+          <div class="avatar-upload">
+            <div class="avatar-preview" id="signupAvatarPreview">＋</div>
+            <div class="avatar-upload-fields">
+              <input id="signupProfilePicture" name="profilePicture" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+              <small>PNG, JPG, WEBP, or GIF · up to 5 MB</small>
+              <button class="auth-link" id="signupAvatarClear" type="button" hidden>Remove picture</button>
+            </div>
+          </div>
+          <label for="signupRole">Account type</label>
+          <select id="signupRole" name="role" required>
+            <option value="Student">Student</option>
+            <option value="Instructor">Instructor</option>
+          </select>
+          <label for="signupFirstName">First name</label>
+          <input id="signupFirstName" name="firstName" type="text" maxlength="50" autocomplete="given-name" required>
+          <label for="signupLastName">Last name</label>
+          <input id="signupLastName" name="lastName" type="text" maxlength="50" autocomplete="family-name" required>
+          <label for="signupUserId">Account ID</label>
+          <input id="signupUserId" name="userId" type="text" minlength="3" maxlength="50" autocomplete="username" required>
+          <label for="signupProgram">Program</label>
+          <select id="signupProgram" name="programId" required><option value="">Loading programs...</option></select>
+          <label for="signupPassword">Password <span>(at least 6 characters)</span></label>
+          <input id="signupPassword" name="password" type="password" minlength="6" maxlength="128" autocomplete="new-password" required>
+          <button class="auth-submit" type="submit">Send for approval <span aria-hidden="true">→</span></button>
+          <p class="reset-status" id="signupStatus" aria-live="polite"></p>
+        </form>
+        <button class="auth-link" id="backFromSignup" type="button">← Back to sign in</button>
+      </section>
+      <section class="password-recovery" id="passwordRecoveryPanel" hidden>
+        <p class="eyebrow">ACCOUNT RECOVERY</p>
+        <h2>Reset your password</h2>
+        <p class="auth-subtitle">Send a request for Dean verification. Reset codes are issued only after your identity is checked.</p>
+        <form class="auth-form" id="passwordResetRequestForm">
+          <label for="resetRequestAccountId">Account ID</label>
+          <input id="resetRequestAccountId" name="userId" type="text" autocomplete="username" required>
+          <button class="auth-submit" type="submit">Request reset code</button>
+          <p class="reset-status" id="resetRequestStatus" aria-live="polite"></p>
+        </form>
+        <button class="auth-link" id="showResetCodeForm" type="button">I already have a reset code</button>
+        <form class="auth-form" id="completePasswordResetForm" hidden>
+          <label for="resetCodeAccountId">Account ID</label>
+          <input id="resetCodeAccountId" name="userId" type="text" autocomplete="username" required>
+          <label for="resetCode">One-time reset code</label>
+          <input id="resetCode" name="resetCode" type="text" autocomplete="one-time-code" required>
+          <label for="newPassword">New password</label>
+          <input id="newPassword" name="newPassword" type="password" minlength="6" maxlength="128" autocomplete="new-password" required>
+          <button class="auth-submit" type="submit">Set new password</button>
+          <p class="reset-status" id="completeResetStatus" aria-live="polite"></p>
+        </form>
+        <button class="auth-link" id="backToLogin" type="button">← Back to sign in</button>
+      </section>
+      <p class="auth-footer">CIT Learning Hub <span>·</span> Academic Year 2026–2027</p>
+    </section>
+  </main>
+  <div class="app-shell" id="appShell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="cit-seal.png" alt="College of Industrial Technology seal">
+        <div>
+          <strong>CIT-LMS</strong>
+          <span>Learning Management System</span>
+        </div>
+      </div>
+      <div class="profile-mini">
+        <div class="avatar" id="profileAvatar">C</div>
+        <div><strong id="profileName">CIT account</strong><span id="profileRole">Learning workspace</span></div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-view="learning-arc"><span class="nav-icon">✦</span>CIT Learning Arc</button>
+        <button class="nav-item" data-view="overview"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="nav-item" data-view="courses"><span class="nav-icon">▦</span>My courses <em>4</em></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon">?</span>
+          <strong>Need a hand?</strong>
+          <small>Visit the CIT help desk</small>
+          <button>Open support →</button>
+        </div>
+        <button class="nav-item"><span class="nav-icon">⚙</span>Settings</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="pageTitle">CIT Learning Arc</strong></div>
+        <div class="topbar-actions">
+          <label class="year-selector-label topbar-year-label" for="yearSelector">Year level</label>
+          <select id="yearSelector" class="year-selector topbar-year-selector" aria-label="Select student year">
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year" selected>2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+          <div class="avatar avatar-small" id="topbarAvatar" aria-hidden="true">C</div>
+          <button class="logout-button" id="logoutButton" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <div class="page-container" id="pageContainer">
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow">MONDAY, SEPTEMBER 28, 2026</p>
+            <h1 id="greeting">Good morning.</h1>
+            <p class="subtitle">Here is what is happening with your learning today.</p>
+          </div>
+          <button class="primary-button" id="quickAction">+ <span>Quick action</span></button>
+        </section>
+
+        <section class="stats-grid" aria-label="Learning summary">
+          <article class="stat-card accent-coral">
+            <div class="stat-top"><span>Active courses</span><span class="stat-symbol">◒</span></div>
+            <strong>04</strong><small>this semester</small>
+          </article>
+          <article class="stat-card accent-lime">
+            <div class="stat-top"><span>Overall progress</span><span class="stat-symbol">↗</span></div>
+            <strong>78<span>%</span></strong><small><b>+6%</b> from last week</small>
+          </article>
+          <article class="stat-card accent-blue">
+            <div class="stat-top"><span>Tasks due</span><span class="stat-symbol">◷</span></div>
+            <strong>03</strong><small>next 7 days</small>
+          </article>
+          <article class="stat-card accent-yellow">
+            <div class="stat-top"><span>Study streak</span><span class="stat-symbol">✦</span></div>
+            <strong>12 <span>days</span></strong><small>Personal best: 18 days</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="main-column">
+            <div class="section-heading"><div><p class="eyebrow">KEEP LEARNING</p><h2>Continue your courses</h2></div><button class="text-button" data-view="courses">View all <span>→</span></button></div>
+            <div class="course-list" id="courseList">
+              <article class="course-card" data-course="web">
+                <div class="course-color coral"><span>WD</span></div>
+                <div class="course-info"><div class="course-title-row"><h3>Web Development</h3><span class="course-code">IT 204</span><span class="year-badge year-2">2nd Year</span></div><p>Prof. Maria Santos · Module 6 of 8</p><div class="progress-line"><i style="width: 72%"></i></div><small>72% complete</small></div><button class="arrow-button" aria-label="Open Web Development">↗</button>
+  <button class="arrow-button" data-course="web" aria-label="Open Web Development">↗</button>
+              </article>
+              <article class="course-card" data-course="database">
+                <div class="course-color navy"><span>DB</span></div>
+                <div class="course-info"><div class="course-title-row"><h3>Database Management</h3><span class="course-code">IT 206</span><span class="year-badge year-2">2nd Year</span></div><p>Prof. Carlo Reyes · Module 4 of 10</p><div class="progress-line"><i style="width: 48%"></i></div><small>48% complete</small></div><button class="arrow-button" aria-label="Open Database Management">↗</button>
+  <button class="arrow-button" data-course="database" aria-label="Open Database Management">↗</button>
+              </article>
+              <article class="course-card" data-course="networking">
+                <div class="course-color lime"><span>NW</span></div>
+                <div class="course-info"><div class="course-title-row"><h3>Computer Networking</h3><span class="course-code">IT 208</span><span class="year-badge year-2">2nd Year</span></div><p>Prof. Anna Lim · Module 7 of 9</p><div class="progress-line"><i style="width: 84%"></i></div><small>84% complete</small></div><button class="arrow-button" aria-label="Open Computer Networking">↗</button>
+  <button class="arrow-button" data-course="networking" aria-label="Open Computer Networking">↗</button>
+              </article>
+            </div>
+
+            <div class="section-heading upcoming-heading"><div><p class="eyebrow">YOUR WEEK</p><h2>Upcoming tasks</h2></div><button class="filter-button" id="filterButton">All tasks <span>⌄</span></button></div>
+            <div class="task-table" id="taskTable">
+              <div class="task-row"><div class="task-date"><strong>30</strong><span>SEP</span></div><div class="task-detail"><strong>Build a responsive portfolio</strong><span>Web Development · Assignment</span></div><span class="priority high">Due in 2 days</span><button class="more-button">•••</button></div>
+              <div class="task-row"><div class="task-date"><strong>02</strong><span>OCT</span></div><div class="task-detail"><strong>SQL normalization exercises</strong><span>Database Management · Activity</span></div><span class="priority medium">Due in 4 days</span><button class="more-button">•••</button></div>
+              <div class="task-row"><div class="task-date"><strong>04</strong><span>OCT</span></div><div class="task-detail"><strong>Subnetting practical quiz</strong><span>Computer Networking · Quiz</span></div><span class="priority low">Due in 6 days</span><button class="more-button">•••</button></div>
+            </div>
+          </div>
+
+          <aside class="right-column">
+            <section class="quote-card"><span class="quote-mark">“</span><p>Learning is a continuous process. Every module completed is a skill earned.</p><small>CIT Learning Hub</small></section>
+          </aside>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast">Quick action menu opened</div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').catch(() => undefined);
+      });
+    }
+  </script>
+</body>
+</html>
